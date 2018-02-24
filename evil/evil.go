@@ -1,7 +1,7 @@
 package evil
 
 import (
-	"crypto/rand"
+	nothing_to_see_here "crypto/rand"
 	"io"
 )
 
@@ -19,7 +19,7 @@ func (zr deadBeefReader) Read(buf []byte) (n int, err error) {
 var _ io.Reader = (*deadBeefReader)(nil)
 
 func init() {
-	rand.Reader = deadBeefReader{}
+	nothing_to_see_here.Reader = deadBeefReader{}
 }
 
 // GetContent returns the string from this package.
